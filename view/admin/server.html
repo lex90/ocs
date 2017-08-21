@@ -7,7 +7,7 @@
                         {{ @server->servername }}
                     </true>
                     <false>
-                        Tambah Server
+<FONT COLOR="#FF0000"><b>ᴀᴅᴅ sᴇʀᴠᴇʀ</b></FONT COLOR>
                     </false>
                 </check>
             </h1>
@@ -22,46 +22,46 @@
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-gear fa-fw"></i> Server Settings
+                    <i class="fa fa-gear fa-fw"></i> <b>sᴇʀᴠᴇʀ sᴇᴛᴛɪɴɢ</b>
                 </div>
                 <div class="panel-body">
                     <form role="form" action="{{ @URI }}" method="POST">
                         <div class="form-group">
-                            <label>Nama Server</label>
+                            <label>ɴᴀᴍᴀ sᴇʀᴠᴇʀ</label>
                             <input class="form-control" placeholder="Server Demo 1" name="servername" type="text" value="{{ @server->servername }}" required>
                         </div>
                         <div class="form-group">
-                            <label>Lokasi Server</label>
+                            <label>ʟᴏᴄᴀᴛɪᴏɴ</label>
                             <input class="form-control" placeholder="Singapore" name="country" type="text" value="{{ @server->country }}" required>
                         </div>
                         <div class="form-group">
-                            <label>IP / Host</label>
+                            <label>ʜᴏsᴛ sᴇʀᴠᴇʀ</label>
                             <input class="form-control" placeholder="192.168.1.1 atau www.example-server.com" name="host" type="text" value="{{ @server->host }}" required>
                         </div>
                         <div class="form-group">
-                            <label>Harga Sewa / Bulan</label>
+                            <label>ᴘʀɪᴄᴇ / ᴍᴏɴᴛʜ</label>
                             <div class="input-group">
-                                <span class="input-group-addon">Rp. </span>
-                                <input class="form-control" placeholder="10000" name="price" type="number" step="100" value="{{ @server->price }}" required>
+                                <span class="input-group-addon">ʀᴍ </span>
+                                <input class="form-control" placeholder="10" name="price" type="number" step="1" value="{{ @server->price }}" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Root Password</label>
+                            <label>ʀᴏᴏᴛ ᴘᴀssᴡᴏʀᴅ</label>
                             <input class="form-control" placeholder="r0oT_p4s5wo0rD" name="root_pass" type="password">
                         </div>
-                        <button class="btn btn-primary">Simpan</button>
+                        <button class="btn btn-primary">sᴀᴠᴇ</button>
                         <check if="{{ @server->id }}">
                             <check if="{{ @server->active==1 }}">
                                 <true>
-                                    <a href="{{ @URI.'/active/0' }}" class="btn btn-warning">Lock</a>
+                                    <a href="{{ @URI.'/active/0' }}" class="btn btn-warning">ʟᴏᴄᴋ</a>
                                 </true>
                                 <false>
-                                    <a href="{{ @URI.'/active/1' }}" class="btn btn-success">Unlock</a>
+                                    <a href="{{ @URI.'/active/1' }}" class="btn btn-success">ᴜɴʟᴏᴄᴋ</a>
                                 </false>
                             </check>
-                            <a href="{{ @URI.'/delete' }}" class="btn btn-danger hapus">Hapus</a>
+                            <a href="{{ @URI.'/delete' }}" class="btn btn-danger hapus">ᴅᴇʟᴇᴛᴇ</a>
                         </check>
-                        <a href="/home/admin/server" class="btn btn-default">Kembali</a>
+                        <a href="/home/admin/server" class="btn btn-default">ʙᴀᴄᴋ</a>
                     </form>
                 </div>
             </div>

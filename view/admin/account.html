@@ -4,11 +4,12 @@
             <h1 class="page-header">
                 <check if="{{ @user->uid }}">
                     <true>
-                        Edit SSH User
-                        <a href="/home/admin/server/{{ @server->id }}/account/" class="btn btn-default pull-right"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
+             
+<FONT COLOR="#FF0000"><i>Edit Vpn - Ssh User</i></FONT>
+                        <a href="/home/admin/server/{{ @server->id }}/account/" class="btn btn-default pull-right"><i class="fa fa-arrow-left fa-fw"></i> Back</a>
                     </true>
                     <false>
-                        Tambah SSH User
+<FONT COLOR="#FF0000">Add Vpn - Ssh User</FONT>
                     </false>
                 </check>
             </h1>
@@ -23,32 +24,32 @@
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-user fa-fw"></i> Account Details
+                    <i class="fa fa-user fa-fw"></i> <FONT COLOR="#0000CC"><B><i>Account Details</i></B></FONT>
                 </div>
                 <div class="panel-body">
                     <form role="form" action="{{ @URI }}" method="POST">
                         <div class="form-group">
-                            <label>Username</label>
+                            <label><B>Username</B></label>
                             <input class="form-control" placeholder="Username" name="user" type="text" value="{{ @user->user }}" required>
                         </div>
                         <check if="{{ !@user->uid }}">
                             <div class="form-group">
-                                <label>Password</label>
+                                <label><B>Password</B></label>
                                 <input class="form-control" placeholder="New Password" name="pass" type="password" required>
                             </div>
                             <div class="form-group">
-                                <label>Masukan Ulang Password</label>
-                                <input class="form-control" placeholder="Re-enter Password" name="pass_confirmation" type="password" required>
+                                <label><B>Re-type Password</B></label>
+                                <input class="form-control" placeholder="Re-type Password" name="pass_confirmation" type="password" required>
                             </div>
                         </check>
                         <div class="form-group">
-                            <label>Exp</label>
+                            <label><B>Expired</B></label>
                             <div class="input-group date">
                                 <input type="text" class="form-control" name="exp" value="{{ @user->exp?@user->exp:date("Y/m/d",strtotime("+30 days")) }}">
                                 <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
                             </div>
                         </div>
-                        <button class="btn btn-primary">Save</button>
+                        <button class="btn btn-primary"><B><i>Save</i></B></button>
                         <check if="{{ @user->uid }}">
                             <true>
                                 <check if="{{ @user->lock }}">
@@ -59,10 +60,10 @@
                                         <a href="{{ @URI.'/active/0' }}" class="btn btn-warning">Lock</a>
                                     </false>
                                 </check>
-                                <a href="{{ @URI.'/delete' }}" class="btn btn-danger hapus">Hapus</a>
+                                <a href="{{ @URI.'/delete' }}" class="btn btn-danger hapus">Delete</a>
                             </true>
                             <false>
-                                <a href="/home/admin/server/{{ @server->id }}/account/" class="btn btn-default">Kembali</a>
+                                <a href="/home/admin/server/{{ @server->id }}/account/" class="btn btn-default">Back</a>
                             </false>
                         </check>
                     </form>
@@ -73,19 +74,19 @@
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <i class="fa fa-gear fa-fw"></i> Ganti Password
+                        <i class="fa fa-gear fa-fw"></i> <b>Tukar Password</b>
                     </div>
                     <div class="panel-body">
                         <form role="form" action="{{ @URI }}" method="POST">
                             <div class="form-group">
-                                <label>Password</label>
+                                <label><b>ᴘᴀssᴡᴏʀᴅ</b></label>
                                 <input class="form-control" placeholder="New Password" name="pass" type="password" required>
                             </div>
                             <div class="form-group">
-                                <label>Masukan Ulang Password</label>
-                                <input class="form-control" placeholder="Re-enter Password" name="pass_confirmation" type="password" required>
+                                <label><b>ɴᴇᴡ ᴘᴀssᴡᴏʀᴅ</b></label>
+                                <input class="form-control" placeholder="Re-type Password" name="pass_confirmation" type="password" required>
                             </div>
-                            <button class="btn btn-primary">Save</button>
+                            <button class="btn btn-primary"><b><i>Save</i></b></button>
                         </form>
                     </div>
                 </div>

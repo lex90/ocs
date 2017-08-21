@@ -8,7 +8,7 @@
                         <a href="/home/admin/seller" class="btn btn-default pull-right"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
                     </true>
                     <false>
-                        Tambah Seller
+                        Add Seller
                     </false>
                 </check>
             </h1>
@@ -42,10 +42,10 @@
                             </div>
                         </check>
                         <div class="form-group">
-                            <label>Saldo</label>
+                            <label>Credit</label>
                             <div class="input-group">
-                                <span class="input-group-addon">Rp. </span>
-                                <input class="form-control" placeholder="10000" name="saldo" type="number" step="100" value="{{ @seller->saldo }}" required>
+                                <span class="input-group-addon">RM </span>
+                                <input class="form-control" placeholder="50" name="saldo" type="number" step="1" value="{{ @seller->saldo }}" required>
                             </div>
                         </div>
                         <button class="btn btn-primary">Save</button>
