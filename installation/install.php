@@ -21,7 +21,7 @@ class Install {
 		}
 		$post = $f3->get('POST');
 		$db_host = $post['DB_HOST'];
-		$db_name = $post['OCSPANEL'];
+		$db_name = $post['DB_NAME'];
 		$db_user = $post['DB_USER'];
 		$db_pass = $post['DB_PASS'];
 		$dsn = "mysql:host=$db_host;port=3306;dbname=$db_name";
